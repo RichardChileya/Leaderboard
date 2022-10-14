@@ -7,34 +7,42 @@
   <title>My Leaderboard </title>
 </head>
 <body>
+  
   <header id="header">
     <h1>Leaderboard</h1>
   </header>
-
-  <section id="section-one">
-    <div class="left-block">
-      <div class="list-header">
-        <h2>Recent scores</h2>
-        <button type="button" id="refresh-btn">Refresh</button>
+<main>
+  <div class="sections-container">
+    <!-- Container for the Sections -->
+    <section id="section-one">
+      <div class="left-block">
+        <div class="list-header">
+          <h2>Recent scores</h2>
+          <button type="submit" id="refresh-btn">Refresh</button>
+        </div>
+        <p class="message"></p>
+        <div class="score-container">
+          <!-- Dynamic Code Here -->
+        </div>
       </div>
-      <div class="score-container">
-        <!-- Dynamic Code Here -->
-      </div>
-    </div>
+      
+     
+     
+      <form class="input-details">
+        <h2>Add your score</h2>
+        <input type="text"  placeholder="Your name" id="name-input">
+        <input type="text"  placeholder="Your score" id="score-input">
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
     
-   
-   
-    <div class="input-details">
-      <h2>Add your score</h2>
-      <input type="text"  placeholder="Your name" id="name-input">
-      <input type="text"  placeholder="Your score" id="score-input">
-      <button class="submit-btn">Submit</button>
-      </div>
+    </section>
+  </div>
   
-  </section>
+</main>
+  
   
 
   
-  <script src="./index.js"></script>
+
 </body>
 </html>
