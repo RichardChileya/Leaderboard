@@ -8,11 +8,29 @@
   padding: 50px  10px;
 }
 
+.sections-container {
+  display: flex;
+  justify-content: center;
+  background-color: azure;
+}
+
 #section-one {
   display: flex;
   align-items: baseline;
   gap: 80px;
   padding-left: 20px;
+}
+
+.left-block {
+  background-color: #caf2c4;
+  width: 400px;
+}
+
+.scoreList {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+  align-items: flex-start;
 }
 
 .list-header {

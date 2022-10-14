@@ -1,67 +1,35 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
+import { addScore, getScores } from './modules/api.js';
 
-/*
-function component() {
-  const element = document.createElement('div');
+const form = document.querySelector('.input-details');
+const alert = document.querySelector('.message');
+const refresh = document.querySelector('#refresh-btn');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-  return element;
-}
+  const nameInput = document.querySelector('#name-input').value;
+  const scoreInput = document.querySelector('#score-input').value;
+  addScore(nameInput, scoreInput);
+  getScores();
 
-document.body.appendChild(component());
-*/
-
-const scores = [
-  {
-    Name: 'Name',
-    score: 100,
-  },
-  {
-    Name: 'Name',
-    score: 20,
-  },
-  {
-    Name: 'Name',
-    score: 50,
-  },
-  {
-    Name: 'Name',
-    score: 78,
-  },
-  {
-    Name: 'Name',
-    score: 125,
-  },
-  {
-    Name: 'Name',
-    score: 100,
-  },
-  {
-    Name: 'Name',
-    score: 77,
-  },
-  {
-    Name: 'Name',
-    score: 42,
-  },
-];
-
-scores.forEach((val) => {
-  const scoreContainer = document.querySelector('.score-container');
-  const divElement = document.createElement('div');
-  divElement.className = 'score-item';
-  divElement.innerHTML = `
-  <div class = "scoreItems">
-      
-      <span>${val.Name}<span/>
-      <span>${val.score}<span/>
-  
-  </div>
-  `;
-  scoreContainer.appendChild(divElement);
+  if (nameInput === '' || scoreInput === '') {
+    alert.innerHTML = 'Please fill in the use & score fields';
+    alert.style.display = 'block';
+    setTimeout(() => {
+      alert.style.display = 'none';
+    }, 6000);
+  } else {
+    alert.innerHTML = ' Score Added!! click REFRESH to show see socres';
+    alert.style.display = 'block';
+    alert.className = 'success';
+    setTimeout(() => {
+      alert.style.display = 'none';
+    }, 6000);
+  }
+  form.reset();
 });
+
+refresh.addEventListener('click', getScores);
