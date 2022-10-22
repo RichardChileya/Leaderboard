@@ -11,7 +11,7 @@ const display = (gameData) => {
 const addScore = async (user, score) => {
   const scoreUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
   const url = `${scoreUrl}games/`;
-  const gameID = 'TxZJWGnmYnPWmpSwkqWN';
+  const gameID = 'dlP7HUDH4KTttRhxokv9';
   const playloadObject = new Scores(user, score);
   const response = await fetch(`${url}${gameID}/scores/`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(playloadObject) });
   const gameData = await response.json();
@@ -21,7 +21,7 @@ const addScore = async (user, score) => {
 const getScores = async () => {
   const scoreUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
   const url = `${scoreUrl}games/`;
-  const gameID = 'TxZJWGnmYnPWmpSwkqWN';
+  const gameID = 'dlP7HUDH4KTttRhxokv9';
   const response = await fetch(`${url}${gameID}/scores/`);
   const gameData = await response.json();
   if (response.ok) {
