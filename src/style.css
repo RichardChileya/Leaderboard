@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+#header {
+  padding: 50px  10px;
+  margin: 20px;
+  display: flex;
+  font-size: 30px;
+  background-color: blue;
+  color: #fff;
+}
+
+.sections-container {
+  display: flex;
+  justify-content: space-between;
+  background: url(./images/background.png);
+  background-size: contain;
+}
+
+#section-one {
+  display: flex;
+  align-items: baseline;
+  gap: 80px;
+  padding-left: 20px;
+  justify-content: space-between;
+}
+
+button {
+  display: flex;
+  color: blue;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.left-block {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff8e;
+  width: 400px;
+  color: blue;
+}
+
+.scoreList {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+  align-items: flex-start;
+  color: black;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+#refresh-btn {
+  display: flex;
+  width: auto;
+  height: 30px;
+  padding: 20px;
+}
+
+.input-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  height: 200px;
+  margin-left: 70px;
+  padding: 20px;
+  background-color: bisque;
+}
+
+.form-header {
+  color: blue;
+  font-size: 24px;
+}
+
+#name-input,
+#score-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20px;
+}
+
+.submit-btn {
+  width: auto;
+  height: 30px;
+  align-self: flex-end;
+}
+
+.score-container {
+  margin: 20px;
+  border: 1px solid rgb(3, 5, 36);
+  width: auto;
+  overflow-y: scroll;
+  height: 300px;
+}
+
+.scoreItems {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  margin-top: 30px;
+}
