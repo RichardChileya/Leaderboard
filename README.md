@@ -13,8 +13,7 @@ This project makes use of webpack to bundle the code.
 - HTML
 - JavaScript
 
-## Live Demo (if available)
-Live link not avaible yet
+## [Live link](https://richardchileya.github.io/Leaderboard/dist/)
 
 ## Getting Started
 
